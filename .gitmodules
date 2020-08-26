@@ -1,3 +1,6 @@
 [submodule "mmf-"]
 	path = mmf-
 	url = https://github.com/facebookresearch/mmf
+[submodule "mmf"]
+	path = mmf
+	url = https://github.com/israelAbebe/mmf
