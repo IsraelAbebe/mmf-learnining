@@ -1,1 +1,5 @@
 git submodule update --remote --merge
+cd mmf
+git checkout -b new
+git checkout master
+git merge new
