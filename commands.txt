@@ -22,3 +22,6 @@ python mmf_cli/run.py  config=projects/vilbert/configs/vqa2/defaults.yaml run_ty
 cp train.jsonl /root/.cache/torch/mmf/data/datasets/hateful_memes/defaults/annotations/train.jsonl
 
 cp dev.jsonl /root/.cache/torch/mmf/data/datasets/hateful_memes/defaults/annotations/dev.jsonl
+
+
+cp test.jsonl /root/.cache/torch/mmf/data/datasets/hateful_memes/defaults/annotations/test.jsonl
