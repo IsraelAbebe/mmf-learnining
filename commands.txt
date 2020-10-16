@@ -11,7 +11,7 @@ pip install --editable .
 python tools/run.py --datasets [dataset] --model [model] --config [config] --run_type inference --evalai_inference 1 --resume_file data/[model].pth
 
 
-python mmf_cli/run.py model=mmbt datasets=hateful_memes run_type=train_val config=projects/hateful_memes/configs/mmbt/defaults.yaml training.early_stop.enabled=True training.class_weight=[1,1]
+python mmf_cli/run.py model=mmbt datasets=hateful_memes run_type=train_val config=projects/hateful_memes/configs/mmbt/defaults.yaml training.early_stop.enabled=True training.class_weight=[1,1] checkpoint.resume_file="mmbt.hateful_memes.images"
 
 
 python mmf_cli/run.py  config=projects/vilbert/configs/vqa2/defaults.yaml run_type=train_val dataset=hateful_memes model=vilbert#
@@ -25,3 +25,6 @@ cp dev.jsonl /root/.cache/torch/mmf/data/datasets/hateful_memes/defaults/annotat
 
 
 cp test.jsonl /root/.cache/torch/mmf/data/datasets/hateful_memes/defaults/annotations/test.jsonl
+
+
+mmf_run config=projects/mmbt/configs/hateful_memes/defaults.yaml run_type=train_val dataset=hateful_memes model=mmbt  training.early_stop.enabled=True  checkpoint.resume_file="mmbt.hateful_memes.images"
